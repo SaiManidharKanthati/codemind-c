@@ -1,21 +1,21 @@
 #include<stdio.h>
 int main()
 {
-    int n,r,sum=0,temp;
+    int n,r=0,rem;
     scanf("%d",&n);
-    temp=n;
-    while(n>0)
+    int tp=n;
+    while(n!=0)
     {
-        r=n%10;
-        sum=(sum*10)+r;
+        rem=n%10;
+        r=r*10+rem;
         n=n/10;
     }
-    if(temp==sum)
+    if(r==tp)
     {
-        printf("True");
+        printf("Palindrome");
     }
     else
     {
-        printf("False");
+        printf("Not Palindrome");
     }
 }
