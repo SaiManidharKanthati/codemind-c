@@ -6,7 +6,6 @@ int main()
     while(n!=0)
     {
         rem=n%10;
-        //printf("%d",n);
         s=s+rem;
         n=n/10;
         c+=1;
@@ -23,10 +22,9 @@ int main()
             while(n!=0)
             {
                 rem=n%10;
-            //printf("%d",n);
-            s=s+rem;
-            n=n/10;
-            c+=1;
+                s=s+rem;
+                n=n/10;
+                c+=1;
             }
         }
         printf("%d",s);
