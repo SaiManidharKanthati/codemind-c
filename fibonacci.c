@@ -1,21 +1,14 @@
 #include<stdio.h>
 int main()
 {
-    int n,temp,c,a=0,b=1;
-    scanf("%d",&n);
-    for(int i=1;i<=n;i++)
-    {
-        if(i==1)
-        c=0;
-        else if(i==2 || i==3)
-        c=1;
-        else
-        {
-            temp=a;
-            a=b;
-            b=c;
-            c=a+b;
-        }
-        printf("%d ",c);
-    }
+    int a=0,b=1,c,i,n;
+	scanf("%d",&n);
+	printf("%d %d ",a,b);
+	for(i=2;i<n;i++)
+	{
+		c=a+b;
+		a=b;
+		b=c;
+		printf("%d ",c);
+	}
 }
