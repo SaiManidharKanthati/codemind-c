@@ -1,44 +1,43 @@
-#include <stdio.h>
-int main ( ) 
+#include<stdio.h>
+int main( ) 
 {
-    int n ;
-    scanf ( "%d" , &n ) ;
-    int a [ n ] ;
-    for ( int i = 0 ; i < n ; i++ )
+    int n;
+    scanf("%d",&n);
+    int a[n];
+    for(int i=0;i<n;i++)
     {
-        scanf ( "%d" , &a [ i ] ) ;
+        scanf("%d",&a[i]);
     }
-    int t = a [ 0 ] , c = 1 ;
-    for ( int i = 1 ; i < n ; i++ )
+    int t=a[0],c=1;
+    for(int i=1;i<n;i++)
     {
-        if ( a [ i ] == t ) 
+        if(a[i] == t) 
         {
-            c++ ;
+            c++;
         }
     }
-    if ( c == n )
+    if(c==n)
     {
-        printf  ( "0" ) ;
+        printf("0");
     }
     else
     {
-        int d , p = 0 ;
-        for ( int i = 0 ; i < n ; i++ )
+        int d,p=0;
+        for(int i=0;i<n;i++)
         {
-            d = 0 ;
-            for ( int j = 0 ; j < n ; j++ )
+            d=0;
+            for(int j=0;j<n;j++)
             {
-                if ( a [ i ] == a [ j ] ) 
+                if(a[i] == a[j])
                 {
-                    d++ ;
+                    d++;
                 }
             }
-            if ( d > p )
+            if(d>p)
             {
-               p = d ;
+               p=d;
             }
         }
-        printf ( "%d" , p ) ;
-        
+        printf("%d",p);
     }
 }
